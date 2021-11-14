@@ -10,3 +10,9 @@
 --> docker container stop <container_id>	OR
 --> docker stop <container_id>
 --> docker ps                         (used to list containers)
+--> docker kill <container_id>
+--> docker exec -it <container_id> bash
+--> docker commit <container_id> <new_image_name>
+--> docker tag <image_name> <username/image_name>
+--> docker login
+--> docker push <(<username>/<image_name>)>
