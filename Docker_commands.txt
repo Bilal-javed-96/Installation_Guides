@@ -1,0 +1,12 @@
+--> docker pull <image_name>
+--> docker container ls
+--> docker container ls -a
+--> docker image ls
+--> docker image ls -a
+--> docker run -it -d -p <instance_port>:<container_port> <image_name>
+--> docker container rm <container_name>
+--> docker image rm <image_name>	OR
+    docker container rm -f <container_id>
+--> docker container stop <container_id>	OR
+--> docker stop <container_id>
+--> docker ps                         (used to list containers)
