@@ -1,0 +1,41 @@
+
+
+https://www.tecmint.com/install-latest-mysql-on-rhel-centos-and-fedora/
+
+RDS_Instance:
+root = Abcd_1234
+fabric = Fabric_1234
+MySQL_Istance
+root = Abcd_1234
+infinity = Infinity@123
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Abcd_1234';
+CREATE USER 'fabric'@'%' IDENTIFIED BY 'Fabric@123';
+GRANT ALL PRIVILEGES ON *.* TO 'fabric'@'%';
+flush privileges;
+
+CREATE USER 'infinity'@'%' IDENTIFIED BY 'Infinity@123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'infinity'@'%';
+flush privileges;
+
+commands:
+
+---> create database movies; (show databases;)
+---> use movies;
+---> CREATE TABLE movies(title VARCHAR(50) NOT NULL,genre VARCHAR(30) NOT NULL,director VARCHAR(60) NOT NULL,release_year INT NOT NULL,PRIMARY KEY(title));
+---> describe movies;
+
+---> INSERT INTO movies VALUE ("Joker", "psychological thriller", "Todd Phillips", 2019);
+---> SELECT * FROM movies;
+---> SELECT title FROM movies;
+---> show master status;
+
+------------
+create database movies;
+use movies;
+CREATE TABLE movie(title VARCHAR(50) NOT NULL,genre VARCHAR(30) NOT NULL,director VARCHAR(60) NOT NULL,release_year INT NOT NULL,PRIMARY KEY(title));
+INSERT INTO movie VALUE ("Joker", "psychological thriller", "Todd Phillips", 2019);
+INSERT INTO movie VALUE ("Gladiator", "history", "Bilal", 2008);
+INSERT INTO movie VALUE ("Bahuballi", "action", "Ayobami", 2017);
+INSERT INTO movie VALUE ("saving private ryan", "war", "solomon", 2021);
